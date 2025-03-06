@@ -7,6 +7,25 @@
 //
 import { strict as assert } from "assert";
 
-const nums = [5, 4, 3, 2, 1];
+const nums = [5, 4, 7, 3, 2, 1, 6];
 
 
+    function sortArray(arr:number[]): number[] {
+        for(let i=0; i<arr.length -1; i++) {
+            let minIndex = i;
+
+            for(let j=i+1; j<arr.length;j++) {
+                if(arr[j] < arr[minIndex]) {
+                    minIndex = j;
+                }
+            }
+
+            [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+        }    
+    return arr;
+}
+
+sortArray(nums);
+
+assert.deepEqual(nums, [1,2,3,4,5,6,7]);
+console.log(nums);

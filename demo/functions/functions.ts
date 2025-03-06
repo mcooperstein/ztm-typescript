@@ -13,3 +13,17 @@ import { strict as assert } from "assert";
 // Useful links:
 // https://www.typescriptlang.org/docs/handbook/2/functions.html
 //
+
+function sayHello() {
+    console.log("hello");
+}
+
+sayHello();
+
+function sum(lhs, rhs) {
+    return lhs + rhs;
+}
+
+const answer = sum(2,2);
+
+console.log(answer);

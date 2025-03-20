@@ -8,3 +8,19 @@
 // Useful links:
 // https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types
 //
+type Color = 'red' | 'green' | 'blue';
+
+const r: Color = 'red';
+
+type StrOrNum = string | number;
+
+function sample(data:StrOrNum) {
+    if(typeof data === 'string') {
+        console.log(`Message: ${data.toUpperCase()}`);
+    } else if(typeof data === 'number') {
+        console.log(`Total: ${10 + data}`);
+    }
+}
+
+sample('hello');
+sample(10);
